@@ -32,8 +32,14 @@ function formSubmission(event) {
   const amount = document.getElementById("conversion-amount").value;
   const fromUnit = document.getElementById("convert-from-unit").value;
   const toUnit = document.getElementById("convert-to-unit").value;
-  getConversion(amount, fromUnit, toUnit);
-  document.getElementById("conversion-amount").value = null;
+
+  if (fromUnit === "KPW" || fromUnit === "XDR" || toUnit === "KPW" || toUnit === "XDR") {
+    document.getElementById("currency-error").removeAttribute("class");
+  } else {
+    document.getElementById("currency-error").setAttribute("class", "hidden");
+    getConversion(amount, fromUnit, toUnit);
+    document.getElementById("conversion-amount").value = null;
+  }
 } 
 
 function displayAllCurrencies() {
