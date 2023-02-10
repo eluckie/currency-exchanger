@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>Title</title>
+  <title>Currency Exchanger</title>
 </head>
 <body>
-  
+  <form id="currency-converter-form">
+    <label for="conversion-amount">Amount to convert:</label>
+    <input id="conversion-amount" type="number">
+    <br>
+    <label for="convert-from-unit">From:</label>
+    <select id="convert-from-unit">
+      <option value="USD">United States Dollar</option>
+      <option value="MXN">Mexican Peso</option>
+      <option value="AUD">Australian Dollar</option>
+      <option value="GBP">Pound Sterling (UK)</option>
+      <option value="HTG">Haitian Gourde</option>
+    </select>
+    <label for="convert-to-unit">To:</label>
+    <select id="convert-to-unit">
+      <option value="USD">United States Dollar</option>
+      <option value="MXN">Mexican Peso</option>
+      <option value="AUD">Australian Dollar</option>
+      <option value="GBP">Pound Sterling (UK)</option>
+      <option value="HTG">Haitian Gourde</option>
+    </select>
+    <br>
+    <button type="submit" id="convert-button">Convert!</button>
+  </form>
 </body>
 </html>
