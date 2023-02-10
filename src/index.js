@@ -22,7 +22,8 @@ function displayConversion(response, amount, fromUnit, toUnit) {
 }
 
 function displayError(response) {
-  document.getElementById("conversion-display").innerText = `There was an error converting your currency: ${response.result} - ${response.errortype}`;
+  document.getElementById("conversion-display").innerText = `There was an error converting your currency
+  ${response}`;
 }
 
 function formSubmission(event) {
