@@ -28,6 +28,7 @@ function displayError(response) {
 
 function formSubmission(event) {
   event.preventDefault();
+  hideAllCurrencies();
   const amount = document.getElementById("conversion-amount").value;
   const fromUnit = document.getElementById("convert-from-unit").value;
   const toUnit = document.getElementById("convert-to-unit").value;
@@ -35,4 +36,14 @@ function formSubmission(event) {
   document.getElementById("currency-converter-form").reset();
 } 
 
+function displayAllCurrencies() {
+  document.getElementById("currency-list").removeAttribute("class");
+}
+
+function hideAllCurrencies() {
+  document.getElementById("currency-list").setAttribute("class", "hidden");
+}
+
 document.getElementById("currency-converter-form").addEventListener("submit", formSubmission);
+document.getElementById("supported-currencies").addEventListener("click", displayAllCurrencies);
+document.getElementById("hide-currencies").addEventListener("click", hideAllCurrencies);
