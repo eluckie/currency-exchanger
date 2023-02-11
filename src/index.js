@@ -1,5 +1,6 @@
 import "./css/styles.css";
 import CurrencyExchangeService from "./js/CurrencyExchangeService";
+import CurrencyCompareService from "./js/CurrencyCompareService";
 
 function getConversion(amount, fromUnit, toUnit) {
   CurrencyExchangeService.getConversion(amount, fromUnit, toUnit)
@@ -11,6 +12,39 @@ function getConversion(amount, fromUnit, toUnit) {
       }
     });
 }
+
+async function topConversions() {
+  const response = await CurrencyCompareService.topConversions();
+  if (response) {
+    displayTopConversions(response);
+  } else {
+    displayComparisonError(response);
+  }
+}
+
+
+function displayTopConversions(response) {
+  let div = document.getElementById("conversion-display");
+  div.innerText = null;
+  div.innerText = `${response.conversion_rates.USD} USD (United States Dollar) is equal to\n
+  ${response.conversion_rates.EUR} EUR (Euro) is equal to\n
+  ${response.conversion_rates.JPY} JPY (Japanese Yen) is equal to\n
+  ${response.conversion_rates.GBP} GBP (Pound Sterling) is equal to\n
+  ${response.conversion_rates.AUD} AUD (Australian Dollar) is equal to\n
+  ${response.conversion_rates.CAD} CAD (Canadian Dollar)`;
+}
+
+function displayComparisonError(response) {
+  document.getElementById("conversion-display").innerText = `There was an error comparing your currency
+  ${response}`;
+}
+
+function processTopConversions() {
+  hideAllCurrencies();
+  topConversions();
+}
+
+
 
 function displayConversion(response, amount, fromUnit, toUnit) {
   let div = document.getElementById("conversion-display");
@@ -66,3 +100,4 @@ document.getElementById("currency-converter-form").addEventListener("submit", fo
 document.getElementById("supported-currencies").addEventListener("click", displayAllCurrencies);
 document.getElementById("hide-currencies-button").addEventListener("click", hideAllCurrencies);
 document.getElementById("reset-button").addEventListener("click", resetScreen);
+document.getElementById("top-conversions-button").addEventListener("click", processTopConversions);
