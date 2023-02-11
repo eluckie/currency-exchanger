@@ -2,7 +2,7 @@
 
 #### By E. Luckie ☀️
 
-#### A webpage where users are able to enter an amount in USD and see the converted rate in various other currencies.
+#### A webpage where users are able to enter an amount of money from a specified currency (that they choose) and see the converted rate in various other currencies of their choosing.
 
 ## Technologies Used
 
@@ -16,38 +16,41 @@
 * npm
 * node.js
 * webpack
-* .env
+* DotEnv
 * Currency Exchanger API
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+This webpage utilizes API calls in order to convert currency. There is 160 supported currencies for user to choose from a drop-down list. Users must enter a whole number in the "amount to convert" field, and choose a currency to convert to and from. When user clicks convert, they are shown what their converted amount is in the new currency, as well as the latest published conversion rate between the specified currencies. 
 
-[Click here](https://eluckie.github.io/currency-exchanger/) to view the live version of this Currency Exchanger webpage.
+If user wishes to see the full list of supported currencies and the countries that use them, they're able to click on the text "click to see supported currencies". This displays a full list of all 160 supported conversions as well as a button to then hide the list once they're done.
+
+There is also a reset button which resets the form, clears the screen of any current conversions, and hides the list of supported currencies if displayed. 
+
+[Click here](https://eluckie.github.io/currency-exchanger/) to view the live version of this Currency Exchanger webpage and view the full list of supported currencies available for conversion.
 
 ## Setup/Installation Requirements
 
 * Clone this repository to your desktop
 #### this application requires an API key to function properly
 * Click the link to navigate to [the currency exchange API](https://www.exchangerate-api.com/)
-* Locate the button at the top right corner that says _Get free key_
-* Enter your email address & a password and click _Accept terms & create API key_
+* Locate the button at the top right corner that says _Get Free Key_
+* Enter your email address & a password and click _Accept Terms & Create API Key_
 * You will then be taken to a page titled "Dashboard" that displays your API key under a section called **API Access**. Copy this entire key as this will be the text you input in your .env file
-* _Note that there is a limited amount of API calls you're able to make with this free key. You are able to keep track of your remaining calls on the same "Dashboard" page under **API Request Quota Usage**_
+_Note that there is a limited amount of API calls you're able to make with this free key. You are able to keep track of your remaining calls on the same "Dashboard" page under **API Request Quota Usage**_
+
+
 * Navigate to the top level of this cloned directory in your computer's terminal
 * create a file named ".env" in the top level of this directory
 * In the text of the .env file, include **API_KEY={your API key}** where _{your API key}_ is replaced with the actual numbers of your API key
 * Navigate back to the top level of this directory in your computer's terminal
-* Run the command "$ npm install" to install the necessary packages
+* Run the command "$ npm install" in your terminal to install the necessary packages
 * Run the command "$ npm run start" in your terminal to build the webpage. This will also open a live server in your browser so that you will be able to see any changes you make to the code in real time.
-#### Be aware that if you want to push your project back to GitHub, your .gitignore file will need to be pushed first, and separately, in order to keep your API key private
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+#### Be aware that if you want to push your project back to GitHub, your .gitignore file will need to be committed first, and separately, in order to keep your API key private
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* No known bugs.
 
 ## License
 

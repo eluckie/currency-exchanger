@@ -53,14 +53,25 @@ body {
   font-weight:bold;
 }
 
+#number-error {
+  color:red;
+  font-weight:bold;
+}
+
 #hide-currencies-button {
-  background-color:black;
-  color:white;
+  background-color:white;
+  color:green;
   font-family:monospace;
+  font-weight:bold;
 }
 
 #supported-currencies {
   color:green;
   font-family:monospace;
   text-align:center;
+}
+
+#conversion-display {
+  text-align:center;
+  font-weight:bold;
 }
