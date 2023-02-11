@@ -4,6 +4,10 @@
   <title>Currency Exchanger</title>
 </head>
 <body>
+  <div id="money-background">
+    <h1 id="title">Currency Exchanger</h1>
+    <h4>Enter a whole number & choose which currencies you'd like to convert between.</h4>
+  </div>
   <p id="currency-error" class="hidden">Sorry, this currency type is not supported or does not exist.</p>
   <form id="currency-converter-form">
     <label for="conversion-amount">Amount to convert:</label>
@@ -342,11 +346,11 @@
   <br>
   <div id="conversion-display"></div>
   <br>
-  <h3 id="supported-currencies">click to see supported currencies</h3>
+  <h1 id="supported-currencies">click to see supported currencies</h1>
+  <button type="button" id="hide-currencies-button" class="hidden">hide list</button>
   <div id="currency-list" class="hidden">
-    <button type="button" id="hide-currencies">hide currency list</button>
     <br>
-    <h5>Currency Name - Country Name</h5>
+    <h3>Currency Name - Country Name</h3>
     <ul>
       <li id="highlight">United States Dollar - United States of America</li>
       <li>Afghan Afghani - Afghanistan</li>

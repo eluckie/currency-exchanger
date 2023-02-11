@@ -1,8 +1,66 @@
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
 .hidden {
   display:none;
+}
+
+#money-background {
+  height:150px;
+  background-image: url("../assets/images/coins.jpg");
+  animation: falling 5s infinite;
+}
+
+@keyframes falling {
+  0% {background-position-y: bottom;}
+}
+
+#title {
+  color:green;
+  font-family:monospace;
+  font-size:50px;
+}
+
+#currency-converter-form {
+  padding:20px;
+  border:2px dashed green;
+  text-align:center;
+  color:green;
+  font-weight:bold;
+}
+
+#convert-button {
+  background-color:green;
+  font-family:monospace;
+}
+
+#reset-button {
+  background-color:white;
+  color:green;
+  font-weight:bold;
+  font-family:monospace;
+  float:right;
 }
 
 #highlight {
   background-color:lightgreen;
   width:450px;
+}
+
+#currency-error {
+  color:red;
+  font-weight:bold;
+}
+
+#hide-currencies-button {
+  background-color:black;
+  color:white;
+  font-family:monospace;
+}
+
+#supported-currencies {
+  color:green;
+  font-family:monospace;
+  text-align:center;
 }
