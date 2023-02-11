@@ -43,6 +43,16 @@ body {
   float:right;
 }
 
+#top-conversions-button {
+  background-color: green;
+  font-family:monospace;
+  color:white;
+}
+
+#top-6-compare {
+  text-align:center;
+}
+
 #highlight {
   background-color:lightgreen;
   width:450px;
