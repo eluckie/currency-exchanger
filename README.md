@@ -25,6 +25,8 @@ This webpage utilizes API calls in order to convert currency. There is 160 suppo
 
 If user wishes to see the full list of supported currencies and the countries that use them, they're able to click on the text "click to see supported currencies". This displays a full list of all 160 supported conversions as well as a button to then hide the list once they're done.
 
+If user wishes to see the latest conversion rate from USD to the other 5 of the top 6 most-used world-wide currencies, they can click the button to compare, and all 6 current conversion rates will be displayed.
+
 There is also a reset button which resets the form, clears the screen of any current conversions, and hides the list of supported currencies if displayed. 
 
 [Click here](https://eluckie.github.io/currency-exchanger/) to view the live version of this Currency Exchanger webpage and view the full list of supported currencies available for conversion.

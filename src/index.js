@@ -22,7 +22,6 @@ async function topConversions() {
   }
 }
 
-
 function displayTopConversions(response) {
   let div = document.getElementById("conversion-display");
   div.innerText = null;
@@ -43,8 +42,6 @@ function processTopConversions() {
   hideAllCurrencies();
   topConversions();
 }
-
-
 
 function displayConversion(response, amount, fromUnit, toUnit) {
   let div = document.getElementById("conversion-display");
