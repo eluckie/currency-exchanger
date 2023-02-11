@@ -1,5 +1,3 @@
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 import CurrencyExchangeService from "./js/CurrencyExchangeService";
 
@@ -35,8 +33,11 @@ function formSubmission(event) {
 
   if (fromUnit === "KPW" || fromUnit === "XDR" || toUnit === "KPW" || toUnit === "XDR") {
     document.getElementById("currency-error").removeAttribute("class");
+  } else if (!amount) {
+    document.getElementById("number-error").removeAttribute("class");
   } else {
     document.getElementById("currency-error").setAttribute("class", "hidden");
+    document.getElementById("number-error").setAttribute("class", "hidden");
     getConversion(amount, fromUnit, toUnit);
     document.getElementById("conversion-amount").value = null;
   }
@@ -44,19 +45,24 @@ function formSubmission(event) {
 
 function displayAllCurrencies() {
   document.getElementById("currency-list").removeAttribute("class");
+  document.getElementById("hide-currencies-button").removeAttribute("class");
 }
 
 function hideAllCurrencies() {
   document.getElementById("currency-list").setAttribute("class", "hidden");
+  document.getElementById("hide-currencies-button").setAttribute("class", "hidden");
 }
 
 function resetScreen() {
   hideAllCurrencies();
   document.getElementById("currency-converter-form").reset();
-  document.getElementById("conversion-display").innerHTML = null;
+  document.getElementById("conversion-display").innerText = null;
+  document.getElementById("number-error").setAttribute("class", "hidden");
+  document.getElementById("currency-error").setAttribute("class", "hidden");
+  document.getElementById("hide-currencies-button").setAttribute("class", "hidden");
 }
 
 document.getElementById("currency-converter-form").addEventListener("submit", formSubmission);
 document.getElementById("supported-currencies").addEventListener("click", displayAllCurrencies);
-document.getElementById("hide-currencies").addEventListener("click", hideAllCurrencies);
+document.getElementById("hide-currencies-button").addEventListener("click", hideAllCurrencies);
 document.getElementById("reset-button").addEventListener("click", resetScreen);
