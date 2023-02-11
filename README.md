@@ -30,13 +30,14 @@ There is also a reset button which resets the form, clears the screen of any cur
 [Click here](https://eluckie.github.io/currency-exchanger/) to view the live version of this Currency Exchanger webpage and view the full list of supported currencies available for conversion.
 
 ## Setup/Installation Requirements
-
-* Clone this repository to your desktop
 #### this application requires an API key to function properly
-* Click the link to navigate to [the currency exchange API](https://www.exchangerate-api.com/)
+* Clone this repository to your desktop
+* Click this link to navigate to [the currency exchange API](https://www.exchangerate-api.com/)
 * Locate the button at the top right corner that says _Get Free Key_
 * Enter your email address & a password and click _Accept Terms & Create API Key_
 * You will then be taken to a page titled "Dashboard" that displays your API key under a section called **API Access**. Copy this entire key as this will be the text you input in your .env file
+
+
 _Note that there is a limited amount of API calls you're able to make with this free key. You are able to keep track of your remaining calls on the same "Dashboard" page under **API Request Quota Usage**_
 
 
@@ -44,9 +45,9 @@ _Note that there is a limited amount of API calls you're able to make with this 
 * create a file named ".env" in the top level of this directory
 * In the text of the .env file, include **API_KEY={your API key}** where _{your API key}_ is replaced with the actual numbers of your API key
 * Navigate back to the top level of this directory in your computer's terminal
-* Run the command "$ npm install" in your terminal to install the necessary packages
-* Run the command "$ npm run start" in your terminal to build the webpage. This will also open a live server in your browser so that you will be able to see any changes you make to the code in real time.
-#### Be aware that if you want to push your project back to GitHub, your .gitignore file will need to be committed first, and separately, in order to keep your API key private
+* Run the command **_$ npm install_** in your terminal to install the necessary packages
+* Run the command **_$ npm run start_** in your terminal to build the webpage. This will also open a live server in your browser so that you will be able to see any changes you make to the code in real time.
+#### Be aware that if you wish to push your project back to GitHub, your .gitignore file will need to be committed first, and separately, in order to keep your API key private
 
 ## Known Bugs
 
